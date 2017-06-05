@@ -1,4 +1,4 @@
-update=6/5/2017 12:54:54 PM
+update=2017-06-05 1:52:20 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=library/wheelerlab
+LibName31=dstat
