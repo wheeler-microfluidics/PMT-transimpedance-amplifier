@@ -104,8 +104,6 @@ Wire Wire Line
 Wire Wire Line
 	6400 3950 6150 3950
 Wire Wire Line
-	4650 4650 5700 4650
-Wire Wire Line
 	5500 3700 5500 4650
 Wire Wire Line
 	5500 3950 5850 3950
@@ -131,48 +129,6 @@ F 3 "" H 7200 4550 50  0001 C CNN
 	1    7200 4550
 	1    0    0    -1  
 $EndComp
-$Comp
-L LMP7715MF U?
-U 1 1 59359B5A
-P 6250 6150
-F 0 "U?" H 6641 6203 60  0000 L CNN
-F 1 "LMP7715MF" H 6641 6097 60  0000 L CNN
-F 2 "" H 6250 6150 60  0000 C CNN
-F 3 "" H 6250 6150 60  0000 C CNN
-	1    6250 6150
-	1    0    0    -1  
-$EndComp
-Text GLabel 6150 6450 3    60   Input ~ 0
-GND
-Text GLabel 6150 5850 1    60   Input ~ 0
-+3.3V
-Wire Wire Line
-	5900 6250 5650 6250
-Wire Wire Line
-	5650 6250 5650 6750
-Wire Wire Line
-	5650 6750 6600 6750
-Wire Wire Line
-	6600 6750 6600 6150
-Wire Wire Line
-	6600 6150 7200 6150
-Wire Wire Line
-	7200 6150 7200 5525
-$Comp
-L R R?
-U 1 1 59359D6D
-P 7200 5375
-F 0 "R?" H 7270 5421 50  0000 L CNN
-F 1 "100" H 7270 5330 50  0000 L CNN
-F 2 "" V 7130 5375 50  0001 C CNN
-F 3 "" H 7200 5375 50  0001 C CNN
-	1    7200 5375
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7200 5225 7200 4750
-Text GLabel 5900 6050 0    60   Input ~ 0
-GND
 Connection ~ 7200 5150
 Wire Wire Line
 	5850 4550 5850 4475
@@ -247,4 +203,20 @@ F 3 "" H 7250 3250 50  0001 C CNN
 	1    7250 3250
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5150 2550 4650 2550
+Wire Wire Line
+	5400 4650 5700 4650
+Wire Wire Line
+	5400 4650 5400 2400
+Wire Wire Line
+	5400 2400 4650 2400
+Wire Wire Line
+	7200 4750 7200 5500
+Wire Wire Line
+	5150 2550 5150 5500
+Wire Wire Line
+	5150 5500 7200 5500
+Text GLabel 4650 2250 2    60   Input ~ 0
++3.3V
 $EndSCHEMATC
