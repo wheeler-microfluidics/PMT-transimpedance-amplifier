@@ -30,7 +30,8 @@ LIBS:contrib
 LIBS:valves
 LIBS:wheelerlab
 LIBS:dstat
-EELAYER 25 0
+LIBS:pmt-transimpedance-amplifier-cache
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -71,7 +72,7 @@ L C C4
 U 1 1 5935889B
 P 6000 3700
 F 0 "C4" V 6075 3550 50  0000 L CNN
-F 1 "200p" V 5850 3625 50  0000 L CNN
+F 1 "200pF" V 5850 3625 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 6038 3550 50  0001 C CNN
 F 3 "" H 6000 3700 50  0001 C CNN
 	1    6000 3700
@@ -120,22 +121,12 @@ L CONN_COAXIAL J1
 U 1 1 5935B2D9
 P 7200 4550
 F 0 "J1" H 7210 4670 50  0000 C CNN
-F 1 "CONN_COAXIAL" V 7315 4550 50  0000 C CNN
+F 1 "CONN_COAXIAL" V 7325 4650 50  0000 C CNN
 F 2 "WheelerLab:JACK_SMA" H 7200 4550 50  0001 C CNN
 F 3 "" H 7200 4550 50  0001 C CNN
 	1    7200 4550
 	1    0    0    -1  
 $EndComp
-Connection ~ 7200 5150
-Wire Wire Line
-	5850 4550 5850 4475
-Wire Wire Line
-	5850 4475 5675 4475
-Wire Wire Line
-	5675 4475 5675 5000
-Wire Wire Line
-	5675 5000 5850 5000
-Connection ~ 5850 5000
 $Comp
 L R R4
 U 1 1 59359FE5
@@ -155,14 +146,6 @@ Text GLabel 7050 3075 0    60   Input ~ 0
 GND
 Text GLabel 7050 3250 0    60   Input ~ 0
 +5V(VUSB)
-Wire Wire Line
-	5850 4750 5850 5450
-Wire Wire Line
-	5850 5450 6900 5450
-Wire Wire Line
-	6900 5450 6900 5150
-Wire Wire Line
-	6900 5150 7600 5150
 $Comp
 L CONN_01X01 J2
 U 1 1 5936EB31
@@ -236,9 +219,7 @@ Wire Wire Line
 Connection ~ 7000 4550
 Wire Wire Line
 	7600 4000 8300 4000
-Wire Wire Line
-	7600 5150 7600 4000
-Text GLabel 7750 4600 3    60   Input ~ 0
+Text GLabel 7950 4300 0    60   Input ~ 0
 GND
 Text GLabel 8300 4900 0    60   Input ~ 0
 +5V(VUSB)
@@ -296,17 +277,6 @@ SCK
 Text GLabel 7050 2850 0    60   Input ~ 0
 +1.2V
 $Comp
-L C C6
-U 1 1 59386748
-P 7750 4150
-F 0 "C6" H 7775 4250 50  0000 L CNN
-F 1 "0.1uF" H 7775 4050 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 7788 4000 50  0001 C CNN
-F 3 "" H 7750 4150 50  0001 C CNN
-	1    7750 4150
-	1    0    0    -1  
-$EndComp
-$Comp
 L C C5
 U 1 1 593867BD
 P 6150 5100
@@ -317,26 +287,6 @@ F 3 "" H 6150 5100 50  0001 C CNN
 	1    6150 5100
 	-1   0    0    1   
 $EndComp
-$Comp
-L Ferrite_Bead L1
-U 1 1 593869F9
-P 8000 4150
-F 0 "L1" V 7850 4175 50  0000 C CNN
-F 1 "Ferrite_Bead" V 8150 4150 50  0000 C CNN
-F 2 "Inductors_SMD:L_0805" V 7930 4150 50  0001 C CNN
-F 3 "" H 8000 4150 50  0001 C CNN
-	1    8000 4150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7750 4300 7750 4600
-Wire Wire Line
-	7750 4600 8300 4600
-Wire Wire Line
-	8000 4300 8000 4600
-Connection ~ 8000 4600
-Connection ~ 7750 4000
-Connection ~ 8000 4000
 Text GLabel 2650 4800 0    60   Input ~ 0
 DIN
 Text GLabel 6500 1950 0    60   Input ~ 0
@@ -349,7 +299,7 @@ Text GLabel 6500 2050 0    60   Input ~ 0
 SCK
 Text GLabel 6500 2150 0    60   Input ~ 0
 DIN
-Text GLabel 7450 1650 2    60   Input ~ 0
+Text GLabel 8175 1650 2    60   Input ~ 0
 +3.3V
 Text GLabel 7450 1750 2    60   Input ~ 0
 GND
@@ -393,54 +343,148 @@ Wire Wire Line
 	5600 2050 5950 2050
 Text GLabel 5600 2050 0    60   Input ~ 0
 GND
-Wire Wire Line
-	7200 4750 7200 5150
 $Comp
 L R R1
 U 1 1 59388A77
-P 5150 5600
-F 0 "R1" V 5230 5600 50  0000 C CNN
-F 1 "10k" V 5150 5600 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 5080 5600 50  0001 C CNN
-F 3 "" H 5150 5600 50  0001 C CNN
-	1    5150 5600
+P 4050 6250
+F 0 "R1" V 4130 6250 50  0000 C CNN
+F 1 "10k" V 4050 6250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 3980 6250 50  0001 C CNN
+F 3 "" H 4050 6250 50  0001 C CNN
+	1    4050 6250
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R2
 U 1 1 59388AC8
-P 5150 5900
-F 0 "R2" V 5230 5900 50  0000 C CNN
-F 1 "3.3k" V 5150 5900 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 5080 5900 50  0001 C CNN
-F 3 "" H 5150 5900 50  0001 C CNN
-	1    5150 5900
+P 4050 6550
+F 0 "R2" V 4130 6550 50  0000 C CNN
+F 1 "3.3k" V 4050 6550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 3980 6550 50  0001 C CNN
+F 3 "" H 4050 6550 50  0001 C CNN
+	1    4050 6550
 	1    0    0    -1  
 $EndComp
-Text GLabel 5150 6050 2    60   Input ~ 0
+Text GLabel 4050 6700 2    60   Input ~ 0
 GND
 $Comp
 L C C1
 U 1 1 59388B2F
-P 4850 5900
-F 0 "C1" H 4875 6000 50  0000 L CNN
-F 1 "0.1uF" H 4875 5800 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 4888 5750 50  0001 C CNN
-F 3 "" H 4850 5900 50  0001 C CNN
-	1    4850 5900
+P 3750 6550
+F 0 "C1" H 3775 6650 50  0000 L CNN
+F 1 "0.1uF" H 3775 6450 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3788 6400 50  0001 C CNN
+F 3 "" H 3750 6550 50  0001 C CNN
+	1    3750 6550
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4850 5750 5300 5750
+	3750 6400 4200 6400
 Wire Wire Line
-	4850 6050 5150 6050
-Text GLabel 5150 5450 0    60   Input ~ 0
+	3750 6700 4050 6700
+Text GLabel 4050 6100 0    60   Input ~ 0
 +3.3V
-Text GLabel 5300 5750 2    60   Input ~ 0
+Text GLabel 4200 6400 2    60   Input ~ 0
 VREF
-Connection ~ 5150 5750
+Connection ~ 4050 6400
 Text GLabel 6400 4750 2    60   Input ~ 0
 VREF
 Text GLabel 4650 2550 2    60   Input ~ 0
 VREF
+$Comp
+L C C8
+U 1 1 5938AB88
+P 8000 1800
+F 0 "C8" H 8025 1900 50  0000 L CNN
+F 1 "0.1uF" H 8025 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 8038 1650 50  0001 C CNN
+F 3 "" H 8000 1800 50  0001 C CNN
+	1    8000 1800
+	-1   0    0    1   
+$EndComp
+Text GLabel 8000 1950 2    60   Input ~ 0
+GND
+Wire Wire Line
+	7450 1650 8175 1650
+Connection ~ 8000 1650
+$Comp
+L LMP7715MF U6
+U 1 1 5938D47C
+P 6350 6075
+F 0 "U6" H 6050 5700 60  0000 C CNN
+F 1 "LMP7715MF" H 5875 5800 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 6350 6075 60  0001 C CNN
+F 3 "" H 6350 6075 60  0000 C CNN
+	1    6350 6075
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5850 4550 5700 4550
+Wire Wire Line
+	5700 4750 5850 4750
+Connection ~ 5700 4750
+Text GLabel 6450 5775 1    60   Input ~ 0
+GND
+Text GLabel 6450 6375 2    60   Input ~ 0
++3.3V
+$Comp
+L C C7
+U 1 1 5938D871
+P 6450 6525
+F 0 "C7" H 6475 6625 50  0000 L CNN
+F 1 "0.1uF" H 6475 6425 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 6488 6375 50  0001 C CNN
+F 3 "" H 6450 6525 50  0001 C CNN
+	1    6450 6525
+	-1   0    0    1   
+$EndComp
+Text GLabel 6450 6675 2    60   Input ~ 0
+GND
+$Comp
+L R R5
+U 1 1 5938DB75
+P 5850 6075
+F 0 "R5" V 5643 6075 50  0000 C CNN
+F 1 "100" V 5734 6075 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 5780 6075 50  0001 C CNN
+F 3 "" H 5850 6075 50  0001 C CNN
+	1    5850 6075
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6700 5975 6875 5975
+Wire Wire Line
+	6875 5975 6875 5475
+Wire Wire Line
+	6875 5475 6000 5475
+Wire Wire Line
+	6000 5475 6000 6075
+Wire Wire Line
+	5700 4550 5700 6075
+Text GLabel 6700 6175 2    60   Input ~ 0
+VREF
+Text GLabel 5700 4750 0    60   Input ~ 0
+Shield
+Wire Wire Line
+	7950 4600 8300 4600
+Wire Wire Line
+	7950 4000 7950 4600
+Connection ~ 7950 4000
+Wire Wire Line
+	7200 4750 7600 4750
+Wire Wire Line
+	7600 4750 7600 4000
+$Comp
+L C C6
+U 1 1 59393EC9
+P 10400 5300
+F 0 "C6" H 10200 5325 50  0000 L CNN
+F 1 "0.1uF" H 10075 5225 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 10438 5150 50  0001 C CNN
+F 3 "" H 10400 5300 50  0001 C CNN
+	1    10400 5300
+	1    0    0    -1  
+$EndComp
+Text GLabel 10400 5150 1    60   Input ~ 0
+GND
 $EndSCHEMATC
