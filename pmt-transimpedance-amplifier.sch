@@ -96,8 +96,8 @@ $Comp
 L R R8
 U 1 1 59359FE5
 P 5925 3575
-F 0 "R8" V 5718 3575 50  0000 C CNN
-F 1 "10k" V 5809 3575 50  0000 C CNN
+F 0 "R8" V 5850 3575 50  0000 C CNN
+F 1 "10k" V 5925 3575 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805" V 5855 3575 50  0001 C CNN
 F 3 "" H 5925 3575 50  0001 C CNN
 	1    5925 3575
@@ -137,12 +137,12 @@ Text GLabel 5975 5925 2    60   Input ~ 0
 MONITOR
 Text GLabel 5225 5200 1    60   Input ~ 0
 +3.3V
-Text GLabel 5625 6175 2    60   Input ~ 0
+Text GLabel 5625 5875 3    60   Input ~ 0
 GND
 Text GLabel 4825 5675 0    60   Input ~ 0
 SCK
 Text GLabel 4825 5775 0    60   Input ~ 0
-DOUT
+MOSI
 Text GLabel 4825 5875 0    60   Input ~ 0
 CS_POT
 $Comp
@@ -156,15 +156,11 @@ F 3 "" H 5325 4125 50  0001 C CNN
 	1    5325 4125
 	-1   0    0    1   
 $EndComp
-Text GLabel 5325 4275 2    60   Input ~ 0
-GND
 Text GLabel 1925 5600 3    60   Input ~ 0
 GND
 Text GLabel 1150 5000 0    60   Input ~ 0
 +3.3V
 Text GLabel 3525 5000 2    60   Input ~ 0
-VREF
-Text GLabel 5575 3775 2    60   Input ~ 0
 VREF
 $Comp
 L MCP1501-SOIC VREF1
@@ -191,20 +187,20 @@ $EndComp
 Text GLabel 7125 1675 2    60   Input ~ 0
 CS_ADC
 Text GLabel 7125 1575 2    60   Input ~ 0
-DOUT
+MOSI
 Text GLabel 7125 1475 2    60   Input ~ 0
-DIN
+MISO
 Text GLabel 7125 1375 2    60   Input ~ 0
 SCK
-Text GLabel 5300 1675 0    60   Input ~ 0
+Text GLabel 5125 1675 0    60   Input ~ 0
 GND
-Text GLabel 5825 1575 0    60   Input ~ 0
+Text GLabel 6025 1575 0    60   Input ~ 0
 VREF
 NoConn ~ 6025 1175
 NoConn ~ 6025 1275
 NoConn ~ 6025 1375
 NoConn ~ 7125 1175
-Text GLabel 4625 1975 0    60   Input ~ 0
+Text GLabel 4800 1975 0    60   Input ~ 0
 ADC
 Text GLabel 7375 1825 2    60   Input ~ 0
 +3.3V
@@ -281,7 +277,7 @@ F 3 "" H 2875 5150 50  0001 C CNN
 	1    2875 5150
 	-1   0    0    1   
 $EndComp
-Text GLabel 5925 1475 0    60   Input ~ 0
+Text GLabel 6025 1475 0    60   Input ~ 0
 GND
 $Comp
 L LMP7715MF U1
@@ -311,8 +307,6 @@ F 3 "" H 3225 3650 50  0001 C CNN
 $EndComp
 Text GLabel 3225 3800 2    60   Input ~ 0
 GND
-Text GLabel 3475 3300 2    60   Input ~ 0
-VREF
 $Comp
 L R R7
 U 1 1 594BEEEC
@@ -326,72 +320,72 @@ F 3 "" H 2300 3200 50  0001 C CNN
 $EndComp
 Text GLabel 2000 3200 0    60   Input ~ 0
 SHIELD
-Text GLabel 4850 4025 0    60   Input ~ 0
+Text GLabel 4850 3850 0    60   Input ~ 0
 SHIELD
 $Comp
 L CONN_02X05 J1
 U 1 1 594C1BE4
-P 3000 1550
-F 0 "J1" H 3000 1850 50  0000 C CNN
-F 1 "CONN_02X05" H 3000 1250 50  0000 C CNN
-F 2 "Connect:he10-10d" H 3000 350 50  0001 C CNN
-F 3 "" H 3000 350 50  0001 C CNN
-	1    3000 1550
+P 2925 1550
+F 0 "J1" H 2925 1850 50  0000 C CNN
+F 1 "CONN_02X05" H 2925 1250 50  0000 C CNN
+F 2 "Connect:he10-10d" H 2925 350 50  0001 C CNN
+F 3 "" H 2925 350 50  0001 C CNN
+	1    2925 1550
 	1    0    0    -1  
 $EndComp
-Text GLabel 3250 1350 2    60   Input ~ 0
+Text GLabel 3175 1350 2    60   Input ~ 0
 MONITOR
-Text GLabel 3250 1450 2    60   Input ~ 0
+Text GLabel 3175 1450 2    60   Input ~ 0
 +5V(VUSB)
-Text GLabel 2750 1450 0    60   Input ~ 0
+Text GLabel 2675 1350 0    60   Input ~ 0
 GND
-Text GLabel 2750 1350 0    60   Input ~ 0
+Text GLabel 2675 1450 0    60   Input ~ 0
 +3.3V
-Text GLabel 2750 1550 0    60   Input ~ 0
+Text GLabel 2375 1550 0    60   Input ~ 0
 CS_POT
-Text GLabel 3550 1550 2    60   Input ~ 0
+Text GLabel 3475 1550 2    60   Input ~ 0
 CS_ADC
-Text GLabel 2450 1650 0    60   Input ~ 0
-DOUT
-Text GLabel 3550 1650 2    60   Input ~ 0
-DIN
-Text GLabel 3550 1750 2    60   Input ~ 0
+Text GLabel 2375 1650 0    60   Input ~ 0
+MOSI
+Text GLabel 3475 1650 2    60   Input ~ 0
+MISO
+Text GLabel 3475 1750 2    60   Input ~ 0
 SCK
-Text GLabel 2750 1750 0    60   Input ~ 0
+Text GLabel 2675 1750 0    60   Input ~ 0
 SHUTTER
 Text GLabel 4575 3675 0    60   Input ~ 0
 ADC
 $Comp
 L R R5
 U 1 1 594C248C
-P 5175 1975
-F 0 "R5" V 5255 1975 50  0000 C CNN
-F 1 "301" V 5175 1975 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 5105 1975 50  0001 C CNN
-F 3 "" H 5175 1975 50  0001 C CNN
-	1    5175 1975
+P 4950 1975
+F 0 "R5" V 5030 1975 50  0000 C CNN
+F 1 "301" V 4950 1975 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 4880 1975 50  0001 C CNN
+F 3 "" H 4950 1975 50  0001 C CNN
+	1    4950 1975
 	0    1    1    0   
 $EndComp
 $Comp
 L C C2
 U 1 1 594C2715
-P 5750 1825
-F 0 "C2" H 5775 1925 50  0000 L CNN
-F 1 "100pF" H 5775 1725 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 5788 1675 50  0001 C CNN
-F 3 "" H 5750 1825 50  0001 C CNN
-	1    5750 1825
+P 5500 1825
+F 0 "C2" H 5525 1925 50  0000 L CNN
+F 1 "100pF" H 5450 1725 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5538 1675 50  0001 C CNN
+F 3 "" H 5500 1825 50  0001 C CNN
+	1    5500 1825
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C1
 U 1 1 594C28E3
-P 5475 1825
-F 0 "C1" H 5500 1925 50  0000 L CNN
-F 1 "0.1uF" H 5250 1750 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 5513 1675 50  0001 C CNN
-F 3 "" H 5475 1825 50  0001 C CNN
-	1    5475 1825
+P 5250 1825
+F 0 "C1" H 5275 1925 50  0000 L CNN
+F 1 "0.1uF" H 5025 1750 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5288 1675 50  0001 C CNN
+F 3 "" H 5250 1825 50  0001 C CNN
+	1    5250 1825
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -433,15 +427,13 @@ Text GLabel 8425 4775 3    60   Input ~ 0
 GND
 Text Label 4175 800  0    60   ~ 0
 ADC
-Text Label 2225 800  0    60   ~ 0
-Teensy_3.2
+Text Label 1950 800  0    60   ~ 0
+Microcontroller
 Text Label 1525 2550 0    60   ~ 0
 Signal_Shield
 Text Label 775  4275 0    60   ~ 0
 3V_Reference
 Text GLabel 8625 3575 0    60   Input ~ 0
-SIGNAL_GND
-Text GLabel 6225 4175 2    60   Input ~ 0
 SIGNAL_GND
 Text GLabel 8625 3275 0    60   Input ~ 0
 SIGNAL_OUTPUT
@@ -449,6 +441,105 @@ Text Label 4175 2525 0    60   ~ 0
 IVC_OpAmp
 Text GLabel 6225 3025 2    60   Input ~ 0
 SIGNAL_OUTPUT
+Text GLabel 10375 4475 2    60   Input ~ 0
+Vcont_INPUT
+Text GLabel 5950 5775 2    60   Input ~ 0
+Vcont_INPUT
+Text Label 4175 4800 0    60   ~ 0
+Input_Voltage_Control
+Text Label 7600 2525 0    60   ~ 0
+PMT_Module
+$Comp
+L R R1
+U 1 1 595E3827
+P 3325 1750
+F 0 "R1" V 3300 1900 50  0000 C CNN
+F 1 "50" V 3325 1750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 3255 1750 50  0001 C CNN
+F 3 "" H 3325 1750 50  0001 C CNN
+	1    3325 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 595E3D48
+P 3325 1650
+F 0 "R2" V 3350 1800 50  0000 C CNN
+F 1 "50" V 3325 1650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 3255 1650 50  0001 C CNN
+F 3 "" H 3325 1650 50  0001 C CNN
+	1    3325 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R3
+U 1 1 595E3EAB
+P 2525 1650
+F 0 "R3" V 2550 1500 50  0000 C CNN
+F 1 "50" V 2525 1650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2455 1650 50  0001 C CNN
+F 3 "" H 2525 1650 50  0001 C CNN
+	1    2525 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R4
+U 1 1 595E3EB1
+P 3325 1550
+F 0 "R4" V 3300 1400 50  0000 C CNN
+F 1 "50" V 3325 1550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 3255 1550 50  0001 C CNN
+F 3 "" H 3325 1550 50  0001 C CNN
+	1    3325 1550
+	0    1    1    0   
+$EndComp
+Text GLabel 5325 4275 3    60   Input ~ 0
+GND
+$Comp
+L R R10
+U 1 1 59623543
+P 2525 1550
+F 0 "R10" V 2550 1375 50  0000 C CNN
+F 1 "50" V 2525 1550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2455 1550 50  0001 C CNN
+F 3 "" H 2525 1550 50  0001 C CNN
+	1    2525 1550
+	0    -1   -1   0   
+$EndComp
+Text GLabel 5575 3775 2    60   Input ~ 0
+GND
+Text GLabel 3475 3300 2    60   Input ~ 0
+GND
+Text GLabel 6375 3775 2    60   Input ~ 0
+SHIELD
+Text GLabel 8475 5675 2    60   Input ~ 0
+DGND
+Text GLabel 8475 5975 2    60   Input ~ 0
+GND
+$Comp
+L C C14
+U 1 1 5963F4BB
+P 8150 5825
+F 0 "C14" H 8175 5925 50  0000 L CNN
+F 1 "0.1uF" H 8250 5825 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 8188 5675 50  0001 C CNN
+F 3 "" H 8150 5825 50  0001 C CNN
+	1    8150 5825
+	1    0    0    -1  
+$EndComp
+$Comp
+L Ferrite_Bead L1
+U 1 1 5963FAFC
+P 7850 5825
+F 0 "L1" H 7925 5900 50  0000 L CNN
+F 1 "Ferrite_Bead" H 7675 6050 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" V 7780 5825 50  0001 C CNN
+F 3 "" H 7850 5825 50  0001 C CNN
+	1    7850 5825
+	1    0    0    -1  
+$EndComp
+Text GLabel 5225 6175 2    60   Input ~ 0
+DGND
 Wire Bus Line
 	4175 4575 4175 2525
 Wire Bus Line
@@ -468,11 +559,7 @@ Wire Bus Line
 Wire Bus Line
 	3900 2550 3900 4000
 Wire Bus Line
-	2225 800  3875 800 
-Wire Bus Line
-	2225 2275 2225 800 
-Wire Bus Line
-	3875 2275 2225 2275
+	1950 2275 1950 800 
 Wire Bus Line
 	3875 800  3875 2275
 Wire Bus Line
@@ -494,21 +581,7 @@ Connection ~ 3100 5300
 Wire Wire Line
 	2450 5000 2325 5000
 Wire Wire Line
-	1175 5600 2450 5600
-Connection ~ 5475 1675
-Connection ~ 5750 1675
-Wire Wire Line
-	5300 1675 6025 1675
-Connection ~ 5475 1975
-Wire Wire Line
-	5475 1975 5750 1975
-Connection ~ 5750 1975
-Wire Wire Line
-	6025 1975 6025 1875
-Wire Wire Line
-	5025 1975 4625 1975
-Wire Wire Line
-	5325 1975 6025 1975
+	2450 5600 1175 5600
 Wire Wire Line
 	2000 3200 2150 3200
 Connection ~ 2550 3200
@@ -524,14 +597,7 @@ Wire Wire Line
 	3475 3100 3625 3100
 Wire Wire Line
 	2750 5000 3525 5000
-Wire Wire Line
-	6025 1475 5925 1475
-Wire Wire Line
-	5900 1675 5900 1775
-Connection ~ 5900 1675
 Connection ~ 3350 5000
-Wire Wire Line
-	5825 1575 6025 1575
 Connection ~ 3100 5000
 Connection ~ 2875 5000
 Connection ~ 7300 1825
@@ -547,12 +613,6 @@ Wire Wire Line
 Connection ~ 1225 5000
 Connection ~ 5225 5275
 Wire Wire Line
-	5900 1775 6025 1775
-Wire Wire Line
-	5625 6175 5625 5875
-Wire Wire Line
-	5225 6175 5625 6175
-Wire Wire Line
 	1150 5000 1275 5000
 Wire Wire Line
 	1275 5000 1275 5200
@@ -567,7 +627,7 @@ Connection ~ 2450 5300
 Wire Wire Line
 	2325 5300 3350 5300
 Wire Wire Line
-	2450 5600 2450 5200
+	2450 5200 2450 5600
 Wire Wire Line
 	2450 5200 2325 5200
 Connection ~ 2450 5000
@@ -580,20 +640,9 @@ Wire Wire Line
 Wire Wire Line
 	4575 3675 4875 3675
 Wire Wire Line
-	6075 4475 6075 4175
-Wire Wire Line
-	5025 4475 6075 4475
-Wire Wire Line
-	5025 3775 5025 4475
-Wire Wire Line
 	5575 3575 5775 3575
 Wire Wire Line
 	6075 3575 6225 3575
-Connection ~ 5025 4025
-Wire Wire Line
-	4850 4025 5025 4025
-Wire Wire Line
-	4850 3500 4850 4025
 Wire Wire Line
 	5025 3500 4850 3500
 Wire Wire Line
@@ -616,16 +665,6 @@ Wire Wire Line
 Wire Wire Line
 	6225 3575 6225 3025
 Wire Wire Line
-	6375 3775 6225 3775
-Wire Wire Line
-	6225 3775 6225 4175
-Wire Wire Line
-	6225 4175 6075 4175
-Text GLabel 10375 4475 2    60   Input ~ 0
-Vcont_INPUT
-Text GLabel 5950 5775 2    60   Input ~ 0
-Vcont_INPUT
-Wire Wire Line
 	5625 5775 5950 5775
 Wire Wire Line
 	5975 5925 5825 5925
@@ -640,14 +679,10 @@ Wire Bus Line
 	4175 6350 6675 6350
 Wire Bus Line
 	6675 6350 6675 4800
-Text Label 4175 4800 0    60   ~ 0
-Input_Voltage_Control
 Wire Bus Line
 	11075 2525 11075 5200
 Wire Bus Line
 	7600 5200 7600 2525
-Text Label 7600 2525 0    60   ~ 0
-PMT_Module
 Wire Bus Line
 	11075 5200 7600 5200
 Wire Bus Line
@@ -658,48 +693,47 @@ Wire Bus Line
 	775  6025 775  4275
 Wire Bus Line
 	775  4275 3925 4275
-$Comp
-L R R1
-U 1 1 595E3827
-P 3400 1750
-F 0 "R1" V 3375 1900 50  0000 C CNN
-F 1 "50" V 3400 1750 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 3330 1750 50  0001 C CNN
-F 3 "" H 3400 1750 50  0001 C CNN
-	1    3400 1750
-	0    1    1    0   
-$EndComp
-$Comp
-L R R2
-U 1 1 595E3D48
-P 3400 1650
-F 0 "R2" V 3425 1800 50  0000 C CNN
-F 1 "50" V 3400 1650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 3330 1650 50  0001 C CNN
-F 3 "" H 3400 1650 50  0001 C CNN
-	1    3400 1650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L R R3
-U 1 1 595E3EAB
-P 2600 1650
-F 0 "R3" V 2625 1500 50  0000 C CNN
-F 1 "50" V 2600 1650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 2530 1650 50  0001 C CNN
-F 3 "" H 2600 1650 50  0001 C CNN
-	1    2600 1650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L R R4
-U 1 1 595E3EB1
-P 3400 1550
-F 0 "R4" V 3375 1400 50  0000 C CNN
-F 1 "50" V 3400 1550 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 3330 1550 50  0001 C CNN
-F 3 "" H 3400 1550 50  0001 C CNN
-	1    3400 1550
-	0    1    1    0   
-$EndComp
+Wire Wire Line
+	5100 1975 5875 1975
+Wire Wire Line
+	5125 1675 6025 1675
+Connection ~ 5500 1675
+Connection ~ 5250 1975
+Wire Wire Line
+	5500 1975 5250 1975
+Connection ~ 5500 1975
+Connection ~ 5250 1675
+Wire Wire Line
+	6025 1875 5750 1875
+Wire Wire Line
+	5750 1875 5750 1675
+Connection ~ 5750 1675
+Wire Wire Line
+	6025 1775 5875 1775
+Wire Wire Line
+	5875 1775 5875 1975
+Wire Wire Line
+	6075 3575 6075 3650
+Wire Wire Line
+	6075 3650 5775 3650
+Wire Wire Line
+	5775 3650 5775 3575
+Wire Bus Line
+	1950 800  3875 800 
+Wire Bus Line
+	3875 2275 1950 2275
+Wire Wire Line
+	8625 3575 8625 4175
+Wire Wire Line
+	4850 3500 4850 3850
+Wire Wire Line
+	5025 3775 5025 3850
+Wire Wire Line
+	5025 3850 4850 3850
+Wire Wire Line
+	7850 5675 8475 5675
+Connection ~ 8150 5675
+Wire Wire Line
+	7850 5975 8475 5975
+Connection ~ 8150 5975
 $EndSCHEMATC
