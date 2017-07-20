@@ -29,7 +29,6 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:wheelerlab
-LIBS:pmt-transimpedance-amplifier-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -703,15 +702,7 @@ Wire Wire Line
 	5500 1975 5250 1975
 Connection ~ 5500 1975
 Connection ~ 5250 1675
-Wire Wire Line
-	6025 1875 5750 1875
-Wire Wire Line
-	5750 1875 5750 1675
 Connection ~ 5750 1675
-Wire Wire Line
-	6025 1775 5875 1775
-Wire Wire Line
-	5875 1775 5875 1975
 Wire Wire Line
 	6075 3575 6075 3650
 Wire Wire Line
@@ -736,4 +727,12 @@ Connection ~ 8150 5675
 Wire Wire Line
 	7850 5975 8475 5975
 Connection ~ 8150 5975
+Wire Wire Line
+	6025 1775 5750 1775
+Wire Wire Line
+	5750 1775 5750 1675
+Wire Wire Line
+	5875 1975 5875 1875
+Wire Wire Line
+	5875 1875 6025 1875
 $EndSCHEMATC
