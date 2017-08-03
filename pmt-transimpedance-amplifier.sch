@@ -29,7 +29,8 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:wheelerlab
-EELAYER 26 0
+LIBS:pmt-transimpedance-amplifier-cache
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -321,36 +322,25 @@ Text GLabel 2000 3200 0    60   Input ~ 0
 SHIELD
 Text GLabel 4850 3850 0    60   Input ~ 0
 SHIELD
-$Comp
-L CONN_02X05 J1
-U 1 1 594C1BE4
-P 2925 1550
-F 0 "J1" H 2925 1850 50  0000 C CNN
-F 1 "CONN_02X05" H 2925 1250 50  0000 C CNN
-F 2 "Connect:he10-10d" H 2925 350 50  0001 C CNN
-F 3 "" H 2925 350 50  0001 C CNN
-	1    2925 1550
-	1    0    0    -1  
-$EndComp
-Text GLabel 3175 1350 2    60   Input ~ 0
+Text GLabel 2400 1900 1    60   Input ~ 0
 MONITOR
-Text GLabel 3175 1450 2    60   Input ~ 0
+Text GLabel 2600 1900 1    60   Input ~ 0
 +5V(VUSB)
-Text GLabel 2675 1350 0    60   Input ~ 0
+Text GLabel 2300 1900 1    60   Input ~ 0
 GND
-Text GLabel 2675 1450 0    60   Input ~ 0
+Text GLabel 2500 1900 1    60   Input ~ 0
 +3.3V
-Text GLabel 2375 1550 0    60   Input ~ 0
+Text GLabel 2700 1600 1    60   Input ~ 0
 CS_POT
-Text GLabel 3475 1550 2    60   Input ~ 0
+Text GLabel 2800 1600 1    60   Input ~ 0
 CS_ADC
-Text GLabel 2375 1650 0    60   Input ~ 0
+Text GLabel 2900 1600 1    60   Input ~ 0
 MOSI
-Text GLabel 3475 1650 2    60   Input ~ 0
+Text GLabel 3000 1600 1    60   Input ~ 0
 MISO
-Text GLabel 3475 1750 2    60   Input ~ 0
+Text GLabel 3200 1600 1    60   Input ~ 0
 SCK
-Text GLabel 2675 1750 0    60   Input ~ 0
+Text GLabel 3100 1900 1    60   Input ~ 0
 SHUTTER
 Text GLabel 4575 3675 0    60   Input ~ 0
 ADC
@@ -451,59 +441,59 @@ PMT_Module
 $Comp
 L R R1
 U 1 1 595E3827
-P 3325 1750
-F 0 "R1" V 3300 1900 50  0000 C CNN
-F 1 "50" V 3325 1750 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 3255 1750 50  0001 C CNN
-F 3 "" H 3325 1750 50  0001 C CNN
-	1    3325 1750
-	0    1    1    0   
+P 3200 1750
+F 0 "R1" V 3175 1900 50  0000 C CNN
+F 1 "50" V 3200 1750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 3130 1750 50  0001 C CNN
+F 3 "" H 3200 1750 50  0001 C CNN
+	1    3200 1750
+	1    0    0    -1  
 $EndComp
 $Comp
 L R R2
 U 1 1 595E3D48
-P 3325 1650
-F 0 "R2" V 3350 1800 50  0000 C CNN
-F 1 "50" V 3325 1650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 3255 1650 50  0001 C CNN
-F 3 "" H 3325 1650 50  0001 C CNN
-	1    3325 1650
-	0    -1   -1   0   
+P 3000 1750
+F 0 "R2" V 3025 1900 50  0000 C CNN
+F 1 "50" V 3000 1750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2930 1750 50  0001 C CNN
+F 3 "" H 3000 1750 50  0001 C CNN
+	1    3000 1750
+	-1   0    0    1   
 $EndComp
 $Comp
 L R R3
 U 1 1 595E3EAB
-P 2525 1650
-F 0 "R3" V 2550 1500 50  0000 C CNN
-F 1 "50" V 2525 1650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 2455 1650 50  0001 C CNN
-F 3 "" H 2525 1650 50  0001 C CNN
-	1    2525 1650
-	0    -1   -1   0   
+P 2900 1750
+F 0 "R3" V 2925 1600 50  0000 C CNN
+F 1 "50" V 2900 1750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2830 1750 50  0001 C CNN
+F 3 "" H 2900 1750 50  0001 C CNN
+	1    2900 1750
+	1    0    0    -1  
 $EndComp
 $Comp
 L R R4
 U 1 1 595E3EB1
-P 3325 1550
-F 0 "R4" V 3300 1400 50  0000 C CNN
-F 1 "50" V 3325 1550 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 3255 1550 50  0001 C CNN
-F 3 "" H 3325 1550 50  0001 C CNN
-	1    3325 1550
-	0    1    1    0   
+P 2800 1750
+F 0 "R4" V 2775 1600 50  0000 C CNN
+F 1 "50" V 2800 1750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2730 1750 50  0001 C CNN
+F 3 "" H 2800 1750 50  0001 C CNN
+	1    2800 1750
+	1    0    0    -1  
 $EndComp
 Text GLabel 5325 4275 3    60   Input ~ 0
 GND
 $Comp
 L R R10
 U 1 1 59623543
-P 2525 1550
-F 0 "R10" V 2550 1375 50  0000 C CNN
-F 1 "50" V 2525 1550 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 2455 1550 50  0001 C CNN
-F 3 "" H 2525 1550 50  0001 C CNN
-	1    2525 1550
-	0    -1   -1   0   
+P 2700 1750
+F 0 "R10" V 2725 1575 50  0000 C CNN
+F 1 "50" V 2700 1750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2630 1750 50  0001 C CNN
+F 3 "" H 2700 1750 50  0001 C CNN
+	1    2700 1750
+	1    0    0    -1  
 $EndComp
 Text GLabel 5575 3775 2    60   Input ~ 0
 GND
@@ -735,4 +725,15 @@ Wire Wire Line
 	5875 1975 5875 1875
 Wire Wire Line
 	5875 1875 6025 1875
+$Comp
+L CONN_01X10 J1
+U 1 1 5981EFB3
+P 2750 2100
+F 0 "J1" H 2750 2650 50  0000 C CNN
+F 1 "CONN_01X10" V 2850 2100 50  0000 C CNN
+F 2 "WheelerLab:CONN-FPC-B-RA-10POS-1mm" H 2750 2100 50  0001 C CNN
+F 3 "" H 2750 2100 50  0001 C CNN
+	1    2750 2100
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
